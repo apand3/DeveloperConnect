@@ -1,0 +1,15 @@
+{
+  "name": "devconnector",
+  "version": "1.0.0",
+  "description": "social network for developers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server":"nodemon server.js"
+  },
+  "author": "abhishek",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
