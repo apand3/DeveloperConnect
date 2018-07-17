@@ -1,18 +1,19 @@
+
 {
   "name": "devconnector",
   "version": "1.0.0",
-  "description": "social network for developers",
+  "description": "Social network for developers",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server":"nodemon server.js",
-    "client-install":"npm install --prefix client",
-    "client":"npm start --prefix client",
-    "dev":"concurrently \"npm run server\" \"npm run client\"",
-"heroku-postbuild":
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild":
       "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "author": "abhishek",
+  "author": "Brad Traversy",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -27,6 +28,6 @@
     "validator": "^9.4.1"
   },
   "devDependencies": {
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.17.3"
   }
 }
