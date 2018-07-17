@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaField from '../common/TextAreaField';
-import { ToastContainer } from "react-toastr";
 import { addExperience } from '../../actions/profileActions';
 
 class AddExperience extends Component{
