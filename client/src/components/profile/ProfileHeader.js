@@ -24,13 +24,14 @@ isEmpty(profile.website)?null:(<a className="text-white p-2" target="_blank" hre
 <i className="fas fa-globe fa-2x"></i>
 </a>)
                   }
+            
                  {
-isEmpty(profile.social || profile.social.facebook)?null:(<a target="_blank" className="text-white p-2" href={profile.social.facebook}>
+isEmpty(profile.social.facebook)?null:(<a target="_blank" className="text-white p-2" href={profile.social.facebook}>
 <i className="fab fa-facebook fa-2x"></i>
 </a>)
                   }
                    {
-isEmpty(profile.social || profile.social.linkedin)?null:(<a target="_blank" className="text-white p-2" href={profile.social.linkedin}>
+isEmpty(profile.social.linkedin)?null:(<a target="_blank" className="text-white p-2" href={profile.social.linkedin}>
 <i className="fab fa-linkedin fa-2x"></i>
 </a>)
                   }
