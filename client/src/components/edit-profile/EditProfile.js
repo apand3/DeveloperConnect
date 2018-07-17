@@ -40,11 +40,11 @@ componentDidMount(){
     }
     if(nextProps.profile.profile){
         const profile=nextProps.profile.profile;
-const cskills="c++,java";
+const cskills=profile.skills.join(",");
 profile.company=!isEmpty(profile.company)?profile.company:'';
 profile.handle=!isEmpty(profile.handle)?profile.handle:'';
 profile.status=!isEmpty(profile.status)?profile.status:'';
-profile.skills=!isEmpty(cskills)?cskills:'';
+
 profile.website=!isEmpty(profile.website)?profile.website:'';
 profile.location=!isEmpty(profile.location)?profile.location:'';
 profile.githubuser=!isEmpty(profile.githubuser)?profile.githubuser:'';
@@ -62,7 +62,7 @@ this.setState({
       website: profile.website,
       location: profile.location,
       status: profile.status,
-      skills: profile.skills,
+      skills:cskills,
       githubuser: profile.githubuser,
       bio: profile.bio,
       twitter: profile.twitter,
