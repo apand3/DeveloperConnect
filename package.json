@@ -5,7 +5,7 @@
   "description": "Social network for developers",
   "main": "server.js",
   "engines": {
-    "node": "10.6.x"
+    "node": "6.1.x"
   },
 
   "scripts": {
