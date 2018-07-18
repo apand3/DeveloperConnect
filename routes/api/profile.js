@@ -9,6 +9,7 @@ const User=require('../../models/User');
 const validateProfileInput=require('../../Validation/profile');
 const validateExpeienceInput=require('../../Validation/experience');
 const validateEducationInput=require('../../Validation/education');
+const validateReferenceInput=require('../../Validation/reference');
 //@access public
 router.get('/test',(req,res)=>res.json({msg:"profile works"}));
 
@@ -273,4 +274,37 @@ profile.save().then(profile=>res.json(profile));
 })
 .catch(err=>res.json(err));
 })
+/////////////////////////
+
+router.post('/reference',(req,res)=>{
+    const{errors,isValid}=validateExpeienceInput(req.body);
+    if(!isValid){
+        return res.status(400).json(errors);
+    }
+   
+    console.log(req.body.current);
+    Profile.findOne({user:req.user.id})
+    .then(profile=>{
+       
+const newExp=
+{
+    title:req.body.title,
+    company:req.body.company,
+    location:req.body.location,
+    from:req.body.from,
+    to:req.body.to,
+    current:req.body.current,
+    description:req.body.description
+}
+// add to experiene array
+
+profile.experience.unshift(newExp);
+profile.save().then(profile=>res.json(profile));
+           
+})
+.catch(err=>res.json(err));
+})
+
+
+///////////////////////////////////
 module.exports=router;

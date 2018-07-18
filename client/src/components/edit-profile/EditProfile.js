@@ -106,14 +106,7 @@ this.setState({
     if (displaySocialInputs) {
       socialInputs = (
         <div>
-          <InputGroupField
-            placeholder="Twitter Profile URL"
-            name="twitter"
-            icon="fab fa-twitter"
-            value={this.state.twitter}
-            onChange={this.onChange}
-            error={errors.twitter}
-          />
+      
 
           <InputGroupField
             placeholder="Facebook Page URL"
